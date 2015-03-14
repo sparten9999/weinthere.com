@@ -1,0 +1,31 @@
+s3_id: <%= ENV['S3_ID'] %>
+s3_secret: <%= ENV['S3_SECRET'] %>
+s3_bucket: weinthere.com
+
+site: web
+
+max_age:
+  "assets/*": 6000
+  "*": 300
+
+gzip:
+  - .html
+  - .css
+  - .md
+gzip_zopfli: true
+
+s3_endpoint: us-west-2
+
+# cloudfront_distribution_id: your-dist-id
+
+# cloudfront_distribution_config:
+#   default_cache_behavior:
+#     min_TTL: <%= 60 * 60 * 24 %>
+#   aliases:
+#     quantity: 1
+#     items:
+#       CNAME: your.website.com
+
+# cloudfront_invalidate_root: true
+
+# concurrency_level: 5

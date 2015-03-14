@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>WE in THere</title>
+  <style type="text/css">
+    body {
+      background-color: #fce7b7;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      height: 100%;
+      width: 100%;
+      position: center;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #why {
+      background-size: 282px 282px;
+      background-repeat: repeat;
+      background: linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+      )
+    }
+    #pic {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: 50%;
+    }
+  </style>
+ <script type="text/javascript">
+    function swapColor() {
+      var why = document.getElementById("why");
+      var butt = "linear-gradient(" + getRandomRgb() + "," + getRandomRgb() + "), url('assets/intherebg.gif')";
+      why.style.background = butt;
+      //why.style.backgroundColor = getRandomColor();
+    }
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomRgb() {
+      var red = randomInt(0, 255); 
+      var green = randomInt(0, 255);
+      var blue = randomInt(0, 255);
+      return "rgba(" + red + "," + green + "," + blue + ", 0.60)";
+    }
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF'.split('');
+      var color = '#';
+      for (var i = 0; i < 6; i++ ) {
+          color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    setInterval(swapColor, 236);
+  </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50193990-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div id="why">
+    <div id="pic">
+    <a href="http://wildeone.tv"><img src="assets/monointhere.gif" /></a>
+    </div>
+  </div>
+  <div style="display: none; position: fixed; z-index: -99; width: 100%; height: 100%">
+    <iframe frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/kmk2EnwRbDE?autoplay=1&controls=0&showinfo=0&autohide=1">
+    </iframe>
+  </div>
+</body>
+
+</html>
