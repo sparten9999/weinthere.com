@@ -5,6 +5,9 @@ env:
 install:
   - gem install s3_website
 
+build:
+  - echo build
+
 deploy:
   provider: script
   script: ./deploy.sh
