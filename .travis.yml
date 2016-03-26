@@ -5,5 +5,5 @@ env:
 install:
   - gem install s3_website
 
-script:
+deploy:
   - s3_website push
