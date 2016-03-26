@@ -5,7 +5,7 @@ env:
 install:
   - gem install s3_website
 
-build:
+script:
   - echo build
 
 deploy:
