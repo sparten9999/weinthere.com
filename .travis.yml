@@ -6,4 +6,7 @@ install:
   - gem install s3_website
 
 deploy:
-  - s3_website push
+  provider: script
+  script: ./deploy.sh
+  on:
+   branch: master
